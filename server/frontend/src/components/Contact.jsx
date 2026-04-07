@@ -5,12 +5,6 @@ export default function Contact() {
     <div>
       <Header />
 
-      {isLoggedIn && (
-        <h2 style={{ marginLeft: "20px", marginTop: "20px" }}>
-          Welcome, {loggedInUser}
-        </h2>
-      )}
-
       <div style={{ width: "85%", margin: "40px auto" }}>
         <div
           style={{
