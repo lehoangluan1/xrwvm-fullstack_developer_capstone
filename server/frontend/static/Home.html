@@ -7,7 +7,16 @@
 <script>
 
 const logout = async (e) => {
-//Include the code for logout here.
+  let response = await fetch("/djangoapp/logout", {
+    method: "GET",
+  });
+
+  let res = await response.json();
+
+  if (res) {
+    sessionStorage.removeItem("username");
+    window.location.href = "/";
+  }
 };
 
 let checkSession = ()=>{
@@ -47,18 +56,18 @@ let checkSession = ()=>{
       <span class="navbar-text">
         <div class="loginlink" id="loginlogout">
         </div>
-        </span>
+      </span>
     </div>
   </div>
 </nav>
 <div style="display: flex;flex-direction: column;">
-<div class="card" style="width: 50%;margin-top: 50px;align-self: center;">
-  <img src="static/car_dealership.jpg" class="card-img-top" alt="...">
-  <div class="banner">
-    <h5>Welcome to our Dealerships!</h5>
-    <a href="/dealers" class="btn" style="background-color: aqua;margin:10px">View Dealerships</a>
+  <div class="card" style="width: 50%;margin-top: 50px;align-self: center;">
+    <img src="static/car_dealership.jpg" class="card-img-top" alt="...">
+    <div class="banner">
+      <h5>Welcome to our Dealerships!</h5>
+      <a href="/dealers" class="btn" style="background-color: aqua;margin:10px">View Dealerships</a>
+    </div>
   </div>
-</div>
 </div>
 </body>
 </html>
