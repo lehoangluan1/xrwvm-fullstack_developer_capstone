@@ -151,3 +151,4 @@ def initiate():
         type="Sedan",
         year=date(2022, 1, 1),
     )
+    
