@@ -35,7 +35,8 @@ urlpatterns = [
     ),
     path('about/', TemplateView.as_view(template_name="index.html")),
     path('contact/', TemplateView.as_view(template_name="index.html")),
-] + static(
+] + static(cd /home/project/xrwvm-fullstack_developer_capstone/server/frontend
+npm run build
     settings.STATIC_URL,
     document_root=settings.STATIC_ROOT,
 ) + static(
